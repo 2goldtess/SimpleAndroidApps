@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light"
+    android:padding="50dp"
+    tools:context="com.example.android.knockknock.KnockKnockActivity">
+
+    <TextView
+        android:id="@+id/knockknockTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Knock Knock..."
+        android:textColor="#80ffffff"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/whosThereTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/knockknockTextView"
+        android:text="Who's there?"
+        android:textColor="#80ffffff"
+        android:textSize="24sp" />
+
+
+    <TextView
+        android:id="@+id/jokeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="sans-serif"
+        android:lineSpacingExtra="5sp"
+        android:text="Somebody too short to ring the doorbell."
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/showAnotherJokeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/background_light"
+        android:text="Tell Another One" />
+
+</RelativeLayout>
