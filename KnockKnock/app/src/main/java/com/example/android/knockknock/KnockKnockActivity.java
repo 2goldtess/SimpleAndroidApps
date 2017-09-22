@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 public class KnockKnockActivity extends AppCompatActivity {
     JokeBook jokeBook = new JokeBook();
+    ColorWheel colorWheel = new ColorWheel();
 
     // Declared View variables
     private TextView jokeTextView;
@@ -34,12 +35,16 @@ public class KnockKnockActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String joke = jokeBook.getJoke();
                 // Update the screen with the new joke
+                String joke = jokeBook.getJoke();
                 jokeTextView.setText(joke);
 
                 // Change background color
-                jokeLayout.setBackgroundColor(Color.MAGENTA);
+                int color = colorWheel.getColor();
+                jokeLayout.setBackgroundColor(color);
+
+                // Change button textColor
+                showAnotherJokeButton.setTextColor(color);
 
             }
         };
